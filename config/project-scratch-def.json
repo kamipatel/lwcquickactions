@@ -1,0 +1,13 @@
+{
+  "orgName": "Kam",
+  "edition": "Developer",
+  "features": ["LwcQuickActionsCreating"],
+  "settings": {
+    "lightningExperienceSettings": {
+        "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+        "enableS1EncryptedStoragePref2": false
+    }
+  }
+}
