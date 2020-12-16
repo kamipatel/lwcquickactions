@@ -1,5 +1,5 @@
 # Lwc Quick Action components for performance testing
-test
+testing
 ## Auth with the STMPA org
 
 1. Open `http://your-org.my.stmpa.stm.salesforce.com/qa/initSdxOauth.jsp`
