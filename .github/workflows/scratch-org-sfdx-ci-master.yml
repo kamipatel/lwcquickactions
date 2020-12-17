@@ -1,11 +1,16 @@
 # Unique name for this workflow
 name: Salesforce DX (scratch org)
 
-# Definition when the workflow should run
 on:
-    push:
-        branches:
-            - master
+  workflow_dispatch:
+    inputs:
+      email:
+        description: 'email'
+        required: true
+        default: 'warning'
+
+env:
+  INPUT_EMAIL: ${{ github.event.inputs.email }}
 
 # Jobs to be executed
 jobs:
@@ -65,7 +70,7 @@ jobs:
 
             # Create scratch org
             - name: 'Create scratch org'
-              run: 'sfdx force:org:create -f config/project-scratch-def.json -a scratch-org adminEmail={{}} -s -d 1'
+              run: 'sfdx force:org:create -f config/project-scratch-def.json -a scratch-org adminEmail=${{INPUT_EMAIL}} -s -d 1'
 
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
