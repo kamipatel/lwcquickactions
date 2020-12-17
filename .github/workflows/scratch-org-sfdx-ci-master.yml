@@ -45,8 +45,8 @@ jobs:
                   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
                   SLACK_CHANNEL: general
                   SLACK_COLOR: '#3278BD'
-                  SLACK_MESSAGE: 'Post Content :ola:'
-                  SLACK_TITLE: pla Title
+                  SLACK_MESSAGE: 'Initiating ADK spin off'
+                  SLACK_TITLE: Initiating
                   SLACK_USERNAME: kamipatel              
 
           # Install Salesforce CLI
@@ -81,3 +81,14 @@ jobs:
             # Run custom Apex
             - name: 'Run custom Apex'
               run: 'sfdx force:apex:execute -f config/create-demo-data-setup.apex'
+
+          # Send notification
+            - name: Slack Notification
+              uses: rtCamp/action-slack-notify@v2
+              env:
+                  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+                  SLACK_CHANNEL: general
+                  SLACK_COLOR: '#3278BD'
+                  SLACK_MESSAGE: 'ADK spin off complete'
+                  SLACK_TITLE:  COMPLETE
+                  SLACK_USERNAME: kamipatel              
