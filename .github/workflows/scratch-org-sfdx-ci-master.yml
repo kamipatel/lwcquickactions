@@ -1,8 +1,8 @@
 # Unique name for this workflow
 name: Salesforce DX (scratch org)
 
-on:
-  workflow_dispatch:
+on: 
+  workflow_dispatch:    
     inputs:
       email:
         description: 'email'
