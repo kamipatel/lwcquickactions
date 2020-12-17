@@ -12,6 +12,7 @@ on:
 env:
   INPUT_EMAIL: ${{ github.event.inputs.email }}
 
+
 # Jobs to be executed
 jobs:
     formatting-and-linting:
