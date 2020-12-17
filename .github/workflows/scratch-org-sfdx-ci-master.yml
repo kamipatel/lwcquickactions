@@ -8,8 +8,6 @@ on:
         description: 'email'     
         required: true
         default: 'kamipatel@gmail.com'
-      tags:
-        description: 'email'  
 
 env:
   INPUT_EMAIL: ${{ github.event.inputs.email }}
