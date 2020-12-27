@@ -24,4 +24,4 @@ sfdx force:source:push -u so
 
 sfdx force:org:open  -u so
 
-
+sfdx force:source:pull -u so
