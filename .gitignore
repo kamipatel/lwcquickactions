@@ -10,6 +10,7 @@
 **/lwc/jsconfig.json
 
 # LWC Jest coverage reports
+prompts
 coverage/
 
 #personal
